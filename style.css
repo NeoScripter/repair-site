@@ -1168,6 +1168,10 @@ input[type="tel"]:focus {
     .social-link-footer {
         font-size: var(--fs-600);
     }
+    .request-form.popup-form,
+    .privacy-policy {
+    padding-block: 30px 60px !important;
+    }
 }
 
 @media screen and (max-width: 380px) {
