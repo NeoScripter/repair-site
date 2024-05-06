@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const firstErrorInput = mainPageWebform.querySelector('.error');
     if (firstErrorInput) {
         firstErrorInput.focus();
-        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'top' });
     }
     // Social links animaition
     function addSocialLinksEventListeners(link, icon, basePath) {
