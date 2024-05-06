@@ -5,7 +5,7 @@
         <h2 class="eq-title title-animated">TO YOUR HOME</h2>
         <p>Please provide your contact details and we'll get in touch within 30 minutes to arrange the specialist's visit.</p>
     </div>
-    <form action="" class="request-form">
+    <form action="" method="POST" class="request-form">
         <label for="username" class="hidden-label">Your name</label>
         <div class="input-wrapper">
             <input type="text" name="username" placeholder="Your Name" aria-label="Username">
@@ -24,8 +24,8 @@
         <label for="user_message" class="hidden-label">Briefly describe your problem</label>
         <textarea name="userMessage" placeholder="Briefly describe your problem"></textarea>
         <div class="checkbox-wrapper">
-            <label for="user_message" class="checkbox-label">
-                <input type="checkbox" required>
+            <label for="consent" class="checkbox-label">
+                <input type="checkbox" name="consent" required>
             </label>
             <p>By clicking the button, you agree to the <button type="button" class="policy-link">privacy policy</button></p>
         </div>

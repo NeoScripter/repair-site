@@ -660,8 +660,17 @@ textarea {
     min-height: 150px;
 }
 
+textarea.error {
+    border: 2px solid var(--red); 
+}
+
 textarea::placeholder {
     color: rgb(146, 139, 139);
+}
+
+textarea.error::placeholder {
+    color: var(--red);
+    opacity: 100%;
 }
 
 .checkbox-wrapper {
@@ -689,12 +698,12 @@ textarea::placeholder {
     opacity: 0.8;
 }
 
-input:focus {
+input[type="text"]:focus {
     outline: none; 
     border: 2px solid var(--dark-blue);
 }
 
-input[type="text"]:focus {
+textarea:focus {
     outline: none; 
     border: 2px solid var(--dark-blue);
 }
@@ -716,18 +725,24 @@ input[type="tel"]:focus {
     opacity: 0%;
 }
 
-.invalid-input.active {
+.invalid-input.error {
     opacity: 100%;
 }
 
-.input[type="text"].active,
-.input[type="tel"].active {
+input[type="text"].error,
+input[type="tel"].error {
     border: 2px solid var(--red); 
 }
 
-.input[type="text"].valid,
-.input[type="tel"].valid {
+
+input[type="text"].valid-input,
+input[type="tel"].valid-input{
     border: 2px solid var(--green); 
+}
+
+input.error::placeholder {
+    color: var(--red);
+    opacity: 100%;
 }
 
 /* Webform pop-up */
@@ -1181,5 +1196,9 @@ input[type="tel"]:focus {
     }
     .services-gallery .appliance-img {
         height: 380px;
+    }
+    .request-form.popup-form,
+    .privacy-policy {
+    padding-block: 30px 60px !important;
     }
 }

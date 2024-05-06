@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const firstErrorInput = document.querySelector('.error');
+    if (firstErrorInput) {
+        firstErrorInput.focus();
+        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
     // Social links animaition
     function addSocialLinksEventListeners(link, icon, basePath) {
         const hoverSrc = `assets/svgs/${basePath}.hover.svg`;
