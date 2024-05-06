@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const firstErrorInput = document.querySelector('.error');
+    const mainPageWebform = document.querySelector('.webform');
+    const firstErrorInput = mainPageWebform.querySelector('.error');
     if (firstErrorInput) {
         firstErrorInput.focus();
         firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'center' });

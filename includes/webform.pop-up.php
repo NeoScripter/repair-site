@@ -17,22 +17,25 @@ unset($_SESSION['errors'], $_SESSION['formData'], $_SESSION['visible-pop-up']);
         <p class="pop-up-prg">Please provide your contact details and we'll get in touch within 30 minutes to arrange the specialist's visit.</p>
         <label for="username" class="hidden-label">Your name</label>
         <div class="input-wrapper">
-            <input type="text" name="username" placeholder="<?php echo isset($errors['username']) ? $errors['username'] : 'Your Name'; ?>" aria-label="Username" value="<?php echo htmlspecialchars($formData['username'] ?? ''); ?>" class="<?php echo isset($errors['username']) ? 'error' : ''; ?>">
+            <input type="text" name="username" placeholder="<?php echo isset($errors['username']) ? $errors['username'] : 'Your Name'; ?>" aria-label="Username" value="<?php echo $formData['username'] ?? ''; ?>" class="<?php echo isset($errors['username']) ? 'error' : ''; ?>">
             <!-- <input type="text" name="username" placeholder="Your Name" aria-label="Username"> -->
             <img src="assets/svgs/invalid-input.svg" alt="red exclamation point" class="invalid-input <?php echo isset($errors['username']) ? 'error' : ''; ?>">
         </div>
         <label for="phone" class="hidden-label">Your Phone</label>
         <div class="input-wrapper">
-            <input type="tel" name="phone" placeholder="<?php echo isset($errors['phone']) ? $errors['phone'] : 'Your Phone'; ?>" aria-label="Phone number" class="<?php echo isset($errors['phone']) ? 'error' : ''; ?>">
+            <input type="tel" name="phone" placeholder="<?php echo isset($errors['phone']) ? $errors['phone'] : 'Your Phone'; ?>" aria-label="Phone number" value="<?php echo $formData['phone'] ?? ''; ?>" class="<?php echo isset($errors['phone']) ? 'error' : ''; ?>">
             <img src="assets/svgs/invalid-input.svg" alt="red exclamation point" class="invalid-input <?php echo isset($errors['phone']) ? 'error' : ''; ?>">
         </div>
         <label for="address" class="hidden-label">Your Address</label>
         <div class="input-wrapper">
-            <input type="text" name="address" placeholder="<?php echo isset($errors['address']) ? $errors['address'] : 'Your Address'; ?>" aria-label="Address" class="<?php echo isset($errors['address']) ? 'error' : ''; ?>">
+            <input type="text" name="address" placeholder="<?php echo isset($errors['address']) ? $errors['address'] : 'Your Address'; ?>" aria-label="Address" value="<?php echo $formData['address'] ?? ''; ?>" class="<?php echo isset($errors['address']) ? 'error' : ''; ?>">
             <img src="assets/svgs/invalid-input.svg" alt="red exclamation point" class="invalid-input <?php echo isset($errors['address']) ? 'error' : ''; ?>">
         </div>
         <label for="user_message" class="hidden-label">Briefly describe your problem</label>
-        <textarea name="userMessage" placeholder="<?php echo isset($errors['userMessage']) ? $errors['userMessage'] : 'Briefly describe your problem'; ?>" class="<?php echo isset($errors['userMessage']) ? 'error' : ''; ?>"></textarea>
+        <div class="input-wrapper">
+            <textarea name="userMessage" placeholder="<?php echo isset($errors['userMessage']) ? $errors['userMessage'] : 'Briefly describe your problem'; ?>" value="<?php echo $formData['userMessage'] ?? ''; ?>" class="<?php echo isset($errors['userMessage']) ? 'error' : ''; ?>"></textarea>
+            <img src="assets/svgs/invalid-input.svg" alt="red exclamation point" class="invalid-input <?php echo isset($errors['userMessage']) ? 'error' : ''; ?>">
+        </div>
         <div class="checkbox-wrapper">
             <label for="consent" class="checkbox-label">
                 <input type="checkbox" name="consent" required>
