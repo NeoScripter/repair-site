@@ -32,7 +32,7 @@ $appliances = [
         'imgPosition' => 'bottom'
     ],
     [
-        'id' => 'item-washing-dishwasher',
+        'id' => 'item-dishwasher',
         'name' => 'Dishwasher',
         'imgSrc' => 'assets/images/appliances/dishwasher.png',
         'imgAlt' => 'Grey dishwasher on light grey background',

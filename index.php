@@ -33,12 +33,12 @@
         <div class="eq-grid-group">
             <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_refrigerator.svg" alt="refrigerator"><p>refrigerator</p></a>
             <a href="services.php#item-washing-machine" class="eq-service-item"><img src="assets/images/icon_service_items/icon_washing_machine.svg" alt="washing machine"><p>washing machine</p></a>
-            <a href="services.php#item-dishwasher" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dryer.svg" alt="dryer"><p>dryer</p></a>
-            <a href="services.php#item-dryer" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dishwasher.svg" alt="dishwasher"><p>dishwasher</p></a>
+            <a href="services.php#item-dryer" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dryer.svg" alt="dryer"><p>dryer</p></a>
+            <a href="services.php#item-dishwasher" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dishwasher.svg" alt="dishwasher"><p>dishwasher</p></a>
             <a href="services.php#item-oven" class="eq-service-item"><img src="assets/images/icon_service_items/icon_oven&stove.svg" alt="oven&stove."><p>oven & stove</p></a>
-            <a href="services.php#item-cooktop" class="eq-service-item"><img src="assets/images/icon_service_items/icon_range_hood.svg" alt="range_hood"><p>range hood</p></a>
+            <a href="services.php#item-rangehood" class="eq-service-item"><img src="assets/images/icon_service_items/icon_range_hood.svg" alt="range_hood"><p>range hood</p></a>
             <a href="services.php#item-microwave" class="eq-service-item"><img src="assets/images/icon_service_items/icon_microwave.svg" alt="microwave"><p>microwave</p></a>
-            <a href="services.php#item-rangehood" class="eq-service-item"><img src="assets/images/icon_service_items/icon_freezer.svg" alt="freezer"><p>freezer</p></a>
+            <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_freezer.svg" alt="freezer"><p>freezer</p></a>
         </div>
         <div class="banner-bottom">
             <a href="services.php" class="repair-request request"><img src="assets/svgs/+orange.svg" alt="plus" class="plus-sign-btn">All services</a>
