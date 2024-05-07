@@ -25,7 +25,7 @@ require_once "webform-fields.php";
             if ($key === 'userMessage') {
                 echo '<textarea name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">'.($formData[$key] ?? '').'</textarea>';
             } else {
-                echo '<input type="'.$field['type'].'" name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" aria-label="'.$field['label'].'" value="'.($formData[$key] ?? '').'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">';
+                echo '<input type="'.$field['type'].'" name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" aria-label="'.$field['label'].'" value="'.(isset($errors[$key]) ? '' : (isset($formData[$key]) ? $formData[$key] : '')).'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">';
             }
             
             echo '<img src="assets/svgs/invalid-input.svg" alt="'.$field['alt'].'" class="invalid-input '.(isset($errors[$key]) ? 'error' : '').'">';

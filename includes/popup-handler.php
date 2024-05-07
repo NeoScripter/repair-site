@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     require_once "config_session.inc.php";
 
-    $redirectUrl = !empty($_POST['redirect_to']) ? $_POST['redirect_to'] : 'defaultpage.php';
+    $redirectUrl = !empty($_POST['redirect_to']) ? $_POST['redirect_to'] : 'index.php';
 
     $_SESSION['visible-pop-up'] = true;
     if (!$errors) {

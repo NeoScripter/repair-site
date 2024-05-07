@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const mainPageWebform = document.querySelector('.webform');
-    const firstErrorInput = mainPageWebform.querySelector('.error');
-    if (firstErrorInput) {
-        firstErrorInput.focus();
-        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'top' });
-    }
     // Social links animaition
     function addSocialLinksEventListeners(link, icon, basePath) {
         const hoverSrc = `assets/svgs/${basePath}.hover.svg`;
@@ -266,4 +260,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setupButtonListeners('.policy-link', '.policy-overlay', true);
     setupButtonListeners('.policy-close-btn', '.policy-overlay', false);
 
+    const mainPageWebform = document.querySelector('.webform');
+    const firstErrorInput = mainPageWebform.querySelector('.error');
+    if (firstErrorInput) {
+        firstErrorInput.focus();
+        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'top' });
+    }
 });
