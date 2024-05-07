@@ -1,4 +1,4 @@
-<?php require_once 'includes/header.php'; ?>
+<?php require_once 'templates/header.php'; ?>
 
 <main class="main">
     <section class="banner">
@@ -97,8 +97,8 @@
         </div>
     </section>
 
-    <?php require_once 'includes/stages.php'; ?>  
-    <?php require_once 'includes/webform.php'; ?>    
-    <?php require_once 'includes/reviews.php'; ?>
+    <?php require_once 'templates/stages.php'; ?>  
+    <?php require_once 'templates/webform.php'; ?>    
+    <?php require_once 'templates/reviews.php'; ?>
     </main>
-    <?php require_once 'includes/footer.php'; ?>
+    <?php require_once 'templates/footer.php'; ?>

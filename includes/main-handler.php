@@ -58,8 +58,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!$errors) {
         // No errors, handle form submission (e.g., send email, save to database)
-        // Redirect to a success page or display a success message  
-        header('Location: ../index.php');
+        // Email recipient and subject
+        $to = 'Alekseibalmakov@yahoo.com';
+        $subject = 'New repair request';
+
+        // Headers
+        $headers = "From: Alekseibalmakov@yahoo.com\r\n";
+        $headers .= "Reply-To: Alekseibalmakov@yahoo.com\r\n";
+        $headers .= "Content-Type: text/plain;charset=utf-8\r\n";
+
+        // Prepare the email body
+        $message = "You have received a new request:\n\n";
+        $message .= "Name: " . $username . "\n";
+        $message .= "Phone: " . $phone . "\n";
+        $message .= "Address: " . $address . "\n";
+        $message .= "Message: " . $userMessage . "\n";
+
+        // Sending the email
+        if (mail($to, $subject, $message, $headers)) {
+            echo 'Email sent successfully!';
+        } else {
+            echo 'Email sending failed.';
+        }
+        // Redirect to the main page or display a success message  
+        header('Location: ' . $redirectUrl);
         exit;
     } else {
         // Save errors and form data into session

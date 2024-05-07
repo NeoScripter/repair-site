@@ -1,5 +1,5 @@
-<?php require_once 'includes/header.php'; ?>
-<?php require_once 'includes/service-desc.php' ?>
+<?php require_once 'templates/header.php'; ?>
+<?php require_once 'templates/service-desc.php' ?>
 
 <main>
 <section class="our-services">
@@ -34,8 +34,8 @@
     </div>
 </section>
 
-<?php require_once 'includes/stages.php'; ?>  
-<?php require_once 'includes/webform.php'; ?> 
-<?php require_once 'includes/reviews.php'; ?>
+<?php require_once 'templates/stages.php'; ?>  
+<?php require_once 'templates/webform.php'; ?> 
+<?php require_once 'templates/reviews.php'; ?>
 </main>
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'templates/footer.php'; ?>

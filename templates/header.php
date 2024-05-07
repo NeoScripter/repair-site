@@ -7,18 +7,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appliance Repair</title>
+
     <link rel="stylesheet" href="reset.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <!-- Favicon -->
     <link rel="icon" href="assets/favicons/favicon-32x32.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicons/favicon-16x16.png" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+
+     <!-- Beige Facebook -->
+     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com/">
+    <meta property="og:title" content="Appliance Repair in San Francisco">
+    <meta property="og:description" content="We are a seasoned team of household appliance repair specialists with over 15 years of experience. With our professionalism and expertise, we guarantee high-quality and prompt restoration of your devices.">
+    <meta property="og:image" content="assets/images/badge.png">
+
+    <!-- Beige Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourwebsite.com/">
+    <meta property="twitter:title" content="Appliance Repair in San Francisco">
+    <meta property="twitter:description" content="We are a seasoned team of household appliance repair specialists with over 15 years of experience. With our professionalism and expertise, we guarantee high-quality and prompt restoration of your devices.">
+    <meta property="twitter:image" content="assets/images/badge.png">
 </head>
 <body>
-    <?php require_once 'includes/webform.pop-up.php'; ?>
-    <?php require_once 'includes/policy.php'; ?>
+    <?php require_once 'templates/webform.pop-up.php'; ?>
+    <?php require_once 'policy.php'; ?>
     <div class="wrapper">
         <header>
             <nav class="nav">

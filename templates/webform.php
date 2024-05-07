@@ -15,7 +15,7 @@ require_once "webform-fields.php";
         <h2 class="eq-title title-animated">TO YOUR HOME</h2>
         <p>Please provide your contact details and we'll get in touch within 30 minutes to arrange the specialist's visit.</p>
     </div>
-    <form action="includes/form-handler-bottom.php" method="POST" class="request-form">
+    <form action="includes/main-handler.php" method="POST" class="request-form">
         <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
     <?php
         foreach ($fields as $key => $field) {

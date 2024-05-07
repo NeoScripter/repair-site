@@ -10,7 +10,7 @@ require_once "webform-fields.php";
 ?>
 
 <div class="webform-popup-overlay <?php echo ($display_pop_up === true) ? 'visible-pop-up' : ''; ?>">
-    <form action="includes/form-handler-top.php" method="POST" class="request-form popup-form">
+    <form action="includes/popup-handler.php" method="POST" class="request-form popup-form">
         <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>">
         <img src="assets/svgs/close-thick.svg" alt="close sign" class="webform-close-btn">
         <div>
