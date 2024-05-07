@@ -399,6 +399,10 @@ section {
 
 /* About */
 
+#about {
+    scroll-margin-top: 110px;
+}
+
 .about-desc-wrapper {
     margin-block: 16px;
     width: 60%;
@@ -919,6 +923,10 @@ textarea.error {
 }
 
 /* Footer */
+
+.footer {
+    scroll-margin-top: 110px;
+}
 
 .footer-flex-group {
     display: flex;
