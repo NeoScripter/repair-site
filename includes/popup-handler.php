@@ -5,10 +5,10 @@ $valid_input = [];
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = htmlspecialchars($_POST["username"]);
-    $phone = htmlspecialchars($_POST["phone"]);
-    $address = htmlspecialchars($_POST["address"]);
-    $userMessage = htmlspecialchars($_POST["userMessage"]);
+    $username = $_POST["username"];
+    $phone = $_POST["phone"];
+    $address = $_POST["address"];
+    $userMessage = $_POST["userMessage"];
 
     require_once "webform_contr.inc.php";
 
@@ -77,9 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Sending the email
         if (mail($to, $subject, $message, $headers)) {
-            echo 'Email sent successfully!';
-        } else {
-            echo 'Email sending failed.';
+            $_SESSION['success_message_pop_up'] = true;
         }
         // Redirect to a success page or display a success message  
         header('Location: ' . $redirectUrl);
@@ -88,10 +86,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Save errors and form data into session
         $_SESSION['errors'] = $errors;
         $form_data = [
-            "username" => $username,
-            "phone" => $phone,
-            "address" => $address,
-            "userMessage" => $userMessage
+            "username" => htmlspecialchars($username),
+            "phone" => htmlspecialchars($phone),
+            "address" => htmlspecialchars($address),
+            "userMessage" => htmlspecialchars($userMessage)
         ];
 
         $_SESSION['valid_input'] = $valid_input;

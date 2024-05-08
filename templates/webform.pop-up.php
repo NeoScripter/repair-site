@@ -7,6 +7,7 @@ $display_pop_up = isset($_SESSION['visible-pop-up']) ? true : false;
 unset($_SESSION['errors'], $_SESSION['formData'], $_SESSION['visible-pop-up'], $_SESSION['valid_input']);
 
 require_once "webform-fields.php";
+require_once "modal-success.php";
 ?>
 
 <div class="webform-popup-overlay <?php echo ($display_pop_up === true) ? 'visible-pop-up' : ''; ?>">

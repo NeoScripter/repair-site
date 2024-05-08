@@ -46,7 +46,7 @@ function is_username_long_enough(string $input_field)
 
 function is_address_long_enough(string $input_field) 
 {
-    if (strlen($input_field) > 12 && strlen($input_field) < 50) {
+    if (strlen($input_field) > 20 && strlen($input_field) < 50) {
         return true;
     } else {
         return false;

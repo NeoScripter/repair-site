@@ -34,6 +34,8 @@
     <meta property="twitter:image" content="assets/images/badge.png">
 </head>
 <body>
+    <?php require_once 'cookie-consent.php'; ?>
+    <?php require_once 'templates/modal-success.php'; ?>
     <?php require_once 'templates/webform.pop-up.php'; ?>
     <?php require_once 'policy.php'; ?>
     <div class="wrapper">

@@ -754,10 +754,16 @@ textarea.error {
     border: 2px solid var(--red); 
 }
 
+.error {
+    scroll-margin-top: 110px;
+}
+
 /* Webform pop-up */
 
 .webform-popup-overlay,
-.policy-overlay {
+.policy-overlay,
+.success-modal-overlay,
+#cookie-consent-overlay {
     position: fixed;
     background-color: rgb(0,0,0,0.8);
     min-height: 100vh;
@@ -766,6 +772,14 @@ textarea.error {
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+.success-modal-overlay {
+    z-index: 502;
+}
+
+#cookie-consent-overlay {
+    z-index: 503;
 }
 
 .policy-overlay {
@@ -777,13 +791,56 @@ textarea.error {
 }
 
 .request-form.popup-form,
-.privacy-policy {
+.privacy-policy,
+.success-modal {
     background-color: var(--white);
     padding: 3vw 7vw;
     width: min(100%, 1420px);
     overflow-y: auto;
     max-height: 100vh;
     position: relative;
+}
+
+.cookie-consent-wrapper {
+    background-color: var(--white);
+    padding: 24px;
+    width: min(100%, 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cookie-close-btn {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: block;
+    padding: 8px 16px;
+    margin-inline: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cookie-prg {
+    color: var(--dark-blue);
+    font-size: var(--fs-600);
+    word-wrap: break-word;
+    letter-spacing: 0.04em;
+}
+
+.success-modal {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    width: min(80%, 1220px);
+}
+
+.success-modal .pop-up-prg {
+    margin: 0;
+}
+
+.success-modal-btn {
+    width: 100%;
 }
 
 .privacy-policy h2 {
@@ -810,7 +867,8 @@ textarea.error {
 }
 
 .webform-close-btn,
-.policy-close-btn {
+.policy-close-btn,
+.success-modal-close-btn {
     position: absolute;
     width: 24px;
     top: 3vw;
@@ -1158,6 +1216,14 @@ textarea.error {
     }
     .eq-title {
         font-size: var(--fs-700);
+    }
+    .success-modal {
+        width: 100%;
+    }
+    .request-form.popup-form,
+    .privacy-policy,
+    .success-modal {
+        padding-block: 30px 50px;
     }
 }
 

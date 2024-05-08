@@ -6,6 +6,7 @@ $valid_input = isset($_SESSION['valid_input-main']) ? $_SESSION['valid_input-mai
 unset($_SESSION['errors-main'], $_SESSION['formData-main'], $_SESSION['visible-pop-up'], $_SESSION['valid_input-main']);
 
 require_once "webform-fields.php";
+require_once "modal-success.php";
 ?>
 
 <section class="webform">
@@ -23,7 +24,7 @@ require_once "webform-fields.php";
             echo '<div class="input-wrapper">';
             
             if ($key === 'userMessage') {
-                echo '<textarea name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">'.($formData[$key] ?? '').'</textarea>';
+                echo '<textarea name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">'.(isset($errors[$key]) ? '' : (isset($formData[$key]) ? $formData[$key] : '')).'</textarea>';
             } else {
                 echo '<input type="'.$field['type'].'" name="'.$key.'" placeholder="'.($errors[$key] ?? $field['placeholder']).'" aria-label="'.$field['label'].'" value="'.(isset($errors[$key]) ? '' : (isset($formData[$key]) ? $formData[$key] : '')).'" class="'.(isset($valid_input[$key]) ? 'valid-input' : (isset($errors[$key]) ? 'error' : '')).'">';
             }

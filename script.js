@@ -259,11 +259,25 @@ document.addEventListener("DOMContentLoaded", function() {
     setupButtonListeners('.webform-close-btn', '.webform-popup-overlay', false);
     setupButtonListeners('.policy-link', '.policy-overlay', true);
     setupButtonListeners('.policy-close-btn', '.policy-overlay', false);
+    setupButtonListeners('.success-modal-btn', '.success-modal-overlay', false);
+
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'yes');
+        document.getElementById('cookie-consent-overlay').style.display = 'none';
+    }
+
+    window.onload = function () {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-consent-overlay').style.display = 'flex';
+        }
+    }
+
+    document.querySelector('.cookie-close-btn').addEventListener('click', acceptCookies);
 
     const mainPageWebform = document.querySelector('.webform');
     const firstErrorInput = mainPageWebform.querySelector('.error');
     if (firstErrorInput) {
         firstErrorInput.focus();
-        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'top' });
+        firstErrorInput.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 });
