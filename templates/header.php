@@ -9,7 +9,7 @@
     <title>Appliance Repair</title>
 
     <link rel="stylesheet" href="reset.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
     <script src="script.js" defer></script>
 
     <!-- Favicon -->
