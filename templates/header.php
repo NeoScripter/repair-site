@@ -1,8 +1,9 @@
 <?php
-    require_once 'includes/config_session.inc.php';
+require_once 'includes/config_session.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +20,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
 
-     <!-- Beige Facebook -->
-     <meta property="og:type" content="website">
+    <!-- Beige Facebook -->
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.yourwebsite.com/">
     <meta property="og:title" content="Appliance Repair in San Francisco">
     <meta property="og:description" content="We are a seasoned team of household appliance repair specialists with over 15 years of experience. With our professionalism and expertise, we guarantee high-quality and prompt restoration of your devices.">
@@ -33,7 +34,9 @@
     <meta property="twitter:description" content="We are a seasoned team of household appliance repair specialists with over 15 years of experience. With our professionalism and expertise, we guarantee high-quality and prompt restoration of your devices.">
     <meta property="twitter:image" content="assets/images/badge.png">
 </head>
+
 <body>
+
     <?php require_once 'cookie-consent.php'; ?>
     <?php require_once 'templates/modal-success.php'; ?>
     <?php require_once 'templates/webform.pop-up.php'; ?>

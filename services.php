@@ -12,7 +12,9 @@
         <?php foreach ($appliances as $appliance): ?>
             <div class="flex-item img-<?= $appliance['side'] ?>" id="<?= $appliance['id'] ?>">
                 <?php if ($appliance['imgPosition'] === 'top'): ?>
-                    <img loading="lazy" src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
+                    <div x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" x-data="{ loading: true }" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('<?= $appliance['imgSrcMin'] ?>');">
+                        <img @load="loading = false" loading="lazy" src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
+                    </div>
                 <?php endif; ?>
                 <div class="service-desc">
                     <h2 class="eq-title title-animated"><?= $appliance['name'] ?></h2>
@@ -27,7 +29,9 @@
                     </div>
                 </div>
                 <?php if ($appliance['imgPosition'] === 'bottom'): ?>
-                    <img src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
+                    <div x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" x-data="{ loading: true }" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('<?= $appliance['imgSrcMin'] ?>');">
+                        <img @load="loading = false" loading="lazy" src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
+                    </div>
                 <?php endif; ?>
             </div>
         <?php endforeach; ?>

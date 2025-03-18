@@ -33,9 +33,14 @@
         </div>
     </div>
     <div class="stage-img-wrapper">
+
         <div class="stage-img-grid-group">
-            <img src="assets/images/stages-left.png" alt="The back of a fridge and the floor below it with various tools scattered around" class="stage-img">
-            <img src="assets/images/stages-right.png" alt="Removed top of a stove turned upside down lying on a tabletop" class="stage-img">
+            <div x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" x-data="{ loading: true }" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('assets/images/stages-left-min.png');">
+                <img @load="loading = false" loading="lazy" src="assets/images/stages-left.webp" alt="The back of a fridge and the floor below it with various tools scattered around" class="stage-img">
+            </div>
+            <div x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" x-data="{ loading: true }" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('assets/images/stages-right-min.png');">
+                <img @load="loading = false" loading="lazy" src="assets/images/stages-right.webp" alt="Removed top of a stove turned upside down lying on a tabletop" class="stage-img">
+            </div>
         </div>
     </div>
 </section>

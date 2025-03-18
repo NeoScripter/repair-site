@@ -5,6 +5,7 @@ $appliances = [
         'id' => 'item-fridge',
         'name' => 'Refrigerators and Freezers',
         'imgSrc' => 'assets/images/appliances/fridge.webp',
+        'imgSrcMin' => 'assets/images/appliances/fridge-min.png',
         'imgAlt' => 'Grey refrigerator on light grey background',
         'issues' => [
             'Compressor and refrigeration system repairs',
@@ -20,6 +21,7 @@ $appliances = [
         'id' => 'item-washing-machine',
         'name' => 'Washing Machine',
         'imgSrc' => 'assets/images/appliances/washing-machine.webp',
+        'imgSrcMin' => 'assets/images/appliances/washing-machine-min.png',
         'imgAlt' => 'Grey washing machine on light grey background',
         'issues' => [
             'Bearing and drive mechanism repairs',
@@ -35,6 +37,7 @@ $appliances = [
         'id' => 'item-dishwasher',
         'name' => 'Dishwasher',
         'imgSrc' => 'assets/images/appliances/dishwasher.webp',
+        'imgSrcMin' => 'assets/images/appliances/dishwasher-min.png',
         'imgAlt' => 'Grey dishwasher on light grey background',
         'issues' => [
             'Pump, valve, and sensor repairs',
@@ -50,6 +53,7 @@ $appliances = [
         'id' => 'item-dryer',
         'name' => 'Dryer',
         'imgSrc' => 'assets/images/appliances/dryer.webp',
+        'imgSrcMin' => 'assets/images/appliances/dryer-min.png',
         'imgAlt' => 'Grey dryer on light grey background',
         'issues' => [
             'Drive and thermostat maintenance',
@@ -65,6 +69,7 @@ $appliances = [
         'id' => 'item-oven',
         'name' => 'oven & stove',
         'imgSrc' => 'assets/images/appliances/oven.webp',
+        'imgSrcMin' => 'assets/images/appliances/oven-min.png',
         'imgAlt' => 'Grey oven on light grey background',
         'issues' => [
             'Heating element restoration',
@@ -80,6 +85,7 @@ $appliances = [
         'id' => 'item-cooktop',
         'name' => 'Cooktop',
         'imgSrc' => 'assets/images/appliances/cooktop.webp',
+        'imgSrcMin' => 'assets/images/appliances/cooktop-min.png',
         'imgAlt' => 'Cooktop on light grey background',
         'issues' => [
             'Gas ignition disruptions',
@@ -95,6 +101,7 @@ $appliances = [
         'id' => 'item-microwave',
         'name' => 'Microwave',
         'imgSrc' => 'assets/images/appliances/microwave.webp',
+        'imgSrcMin' => 'assets/images/appliances/microwave-min.png',
         'imgAlt' => 'Grey microwave on light grey background',
         'issues' => [
             'Magnetron and sensor replacements',
@@ -110,6 +117,7 @@ $appliances = [
         'id' => 'item-rangehood',
         'name' => 'Range hood',
         'imgSrc' => 'assets/images/appliances/rangehood.webp',
+        'imgSrcMin' => 'assets/images/appliances/rangehood-min.png',
         'imgAlt' => 'Grey rangehood on light grey background',
         'issues' => [
             'Motor and ventilation system servicing',

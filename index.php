@@ -13,8 +13,8 @@
             <p class="bnr-pop-up-prg">Submit your request and our manager will contact you</p>
             <div class="repair-request request popup-webform"><img src="assets/svgs/+orange.svg" alt="plus" class="plus-sign-btn">Repair request</div>
         </div>
-        <div class="banner-img">
-            <img loading="lazy" src="assets/images/appliances/bnr-img.webp" alt="gray fridge, stove and washing machine staying next to each other" class="bnr-img">
+        <div x-data="{ loading: true }" x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" :class="loading ? '' : 'image-loaded'" class="banner-img image-loading" style="background-image: url('assets/images/appliances/bnr-img-min.png');">
+            <img @load="loading = false" loading="lazy" src="assets/images/appliances/bnr-img.webp" alt="gray fridge, stove and washing machine staying next to each other" class="bnr-img">
         </div>
         <div class="banner-flex-group">
             <div class="banner-desc">
@@ -31,14 +31,30 @@
         <h2 class="eq-title title-animated"><span class="orange">HOUSEHOLD APPLIANCES</span></h2>
         <h2 class="eq-title title-animated">THAT WE REPAIR</h2>
         <div class="eq-grid-group">
-            <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_refrigerator.svg" alt="refrigerator"><p>refrigerator</p></a>
-            <a href="services.php#item-washing-machine" class="eq-service-item"><img src="assets/images/icon_service_items/icon_washing_machine.svg" alt="washing machine"><p>washing machine</p></a>
-            <a href="services.php#item-dryer" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dryer.svg" alt="dryer"><p>dryer</p></a>
-            <a href="services.php#item-dishwasher" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dishwasher.svg" alt="dishwasher"><p>dishwasher</p></a>
-            <a href="services.php#item-oven" class="eq-service-item"><img src="assets/images/icon_service_items/icon_oven&stove.svg" alt="oven&stove."><p>oven & stove</p></a>
-            <a href="services.php#item-rangehood" class="eq-service-item"><img src="assets/images/icon_service_items/icon_range_hood.svg" alt="range_hood"><p>range hood</p></a>
-            <a href="services.php#item-microwave" class="eq-service-item"><img src="assets/images/icon_service_items/icon_microwave.svg" alt="microwave"><p>microwave</p></a>
-            <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_freezer.svg" alt="freezer"><p>freezer</p></a>
+            <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_refrigerator.svg" alt="refrigerator">
+                <p>refrigerator</p>
+            </a>
+            <a href="services.php#item-washing-machine" class="eq-service-item"><img src="assets/images/icon_service_items/icon_washing_machine.svg" alt="washing machine">
+                <p>washing machine</p>
+            </a>
+            <a href="services.php#item-dryer" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dryer.svg" alt="dryer">
+                <p>dryer</p>
+            </a>
+            <a href="services.php#item-dishwasher" class="eq-service-item"><img src="assets/images/icon_service_items/icon_dishwasher.svg" alt="dishwasher">
+                <p>dishwasher</p>
+            </a>
+            <a href="services.php#item-oven" class="eq-service-item"><img src="assets/images/icon_service_items/icon_oven&stove.svg" alt="oven&stove.">
+                <p>oven & stove</p>
+            </a>
+            <a href="services.php#item-rangehood" class="eq-service-item"><img src="assets/images/icon_service_items/icon_range_hood.svg" alt="range_hood">
+                <p>range hood</p>
+            </a>
+            <a href="services.php#item-microwave" class="eq-service-item"><img src="assets/images/icon_service_items/icon_microwave.svg" alt="microwave">
+                <p>microwave</p>
+            </a>
+            <a href="services.php#item-fridge" class="eq-service-item"><img src="assets/images/icon_service_items/icon_freezer.svg" alt="freezer">
+                <p>freezer</p>
+            </a>
         </div>
         <div class="banner-bottom">
             <a href="services.php" class="repair-request request"><img src="assets/svgs/+orange.svg" alt="plus" class="plus-sign-btn">All services</a>
@@ -91,14 +107,19 @@
                 </div>
             </div>
         </div>
+
         <div class="gallery-grid">
-            <img loading="lazy" src="assets/images/gallery-1.webp" alt="The top of a broken washing machine with the hands of a repairman in gloves">
-            <img loading="lazy" src="assets/images/gallery-2.webp" alt="Open top of a broken washing machine with wires and other tools lying around">
+            <div x-data="{ loading: true }" x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('assets/images/gallery-1-min.webp');">
+                <img @load="loading = false" loading="lazy" src="assets/images/gallery-1.webp" alt="The top of a broken washing machine with the hands of a repairman in gloves">
+            </div>
+            <div x-data="{ loading: true }" x-init="loading = !$el.querySelector('img').complete; $el.querySelector('img').addEventListener('load', () => loading = false);" :class="loading ? '' : 'image-loaded'" class="image-loading" style="background-image: url('assets/images/gallery-2-min.webp');">
+                <img @load="loading = false" loading="lazy" loading="lazy" src="assets/images/gallery-2.webp" alt="Open top of a broken washing machine with wires and other tools lying around">
+            </div>
         </div>
     </section>
 
-    <?php require_once 'templates/stages.php'; ?>  
-    <?php require_once 'templates/webform.php'; ?>    
+    <?php require_once 'templates/stages.php'; ?>
+    <?php require_once 'templates/webform.php'; ?>
     <?php require_once 'templates/reviews.php'; ?>
-    </main>
-    <?php require_once 'templates/footer.php'; ?>
+</main>
+<?php require_once 'templates/footer.php'; ?>

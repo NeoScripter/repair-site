@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'Actay Regular';
+    font-family: 'Actay Regular', 'system-ui';
     src: url('../assets/fonts/Actay-Regular.woff2') format('woff2'),
         url('../assets/fonts/Actay-Regular.woff') format('woff');
     font-weight: normal;
@@ -47,7 +47,7 @@ html, body {
 }
 
 body {
-    font-family: 'Actay Regular';
+    font-family: 'Actay Regular', 'Verdana';
     display: flex;
     justify-content: center;
     color: var(--text-color);
@@ -98,7 +98,7 @@ section {
     font-weight: 700;
     font-size: var(--fs-500);
     color: var(--dark-blue);
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold', 'Verdana';
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -278,7 +278,7 @@ section {
 
 .banner-h1 {
     color: var(--dark-blue);
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     font-size: var(--fs-900);
     width: min(592px, 100%);
     line-height: 76.8px;
@@ -307,7 +307,7 @@ section {
 .banner-img {
     height: 507px;
     width: 733px;
-    position: absolute;
+    position: absolute !important;
     top: 56px;
     right: 94px;
 }
@@ -338,7 +338,7 @@ section {
 }
 
 .desc-large {
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     font-size: var(--fs-800);
     font-weight: 700;
 }
@@ -370,7 +370,7 @@ section {
 /* Equipment */
 
 .eq-title {
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     font-size: var(--fs-800);
     color: var(--dark-blue);
     text-transform: uppercase;
@@ -465,7 +465,7 @@ section {
     text-transform: uppercase;
     font-weight: 700;
     font-size: var(--fs-700);
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
 }
 
 .prg-wrapper p {
@@ -505,7 +505,7 @@ section {
 }
 
 .flex-item-content {
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     max-width: 285px;
     align-self: flex-start;
 }
@@ -939,7 +939,7 @@ textarea.error {
 .carousel-item h2 {
     font-size: var(--fs-700);
     text-transform: uppercase;
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
 }
 
 .carousel-item p {
@@ -1043,7 +1043,7 @@ textarea.error {
 
 .services-h1 {
     color: var(--dark-blue);
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     font-size: var(--fs-900);
     line-height: 76.8px;
     text-transform: uppercase;
@@ -1096,12 +1096,59 @@ textarea.error {
 }
 
 .h3-services {
-    font-family: 'Actay Bold';
+    font-family: 'Actay Bold','Verdana';
     font-size: var(--fs-700);
     color: var(--dark-blue);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+
+.image-loading.image-loaded {
+    background-image: none !important;
+}
+
+.image-loading.image-loaded > img {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.image-loading > img {
+    opacity: 0;
+}
+
+.image-loading {
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.image-loading::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    animation: pulse 2s infinite;
+}
+
+.image-loading.image-loaded::before {
+    content: none !important;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(255,255,255,0);
+    }
+
+    50% {
+        background-color: rgba(255,255,255,0.15);
+    }
+
+    100% {
+        background-color: rgba(255,255,255,0);
+    }
+}
+
 
 @media screen and (max-width: 1440px) {
     .banner-title {
