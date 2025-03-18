@@ -13,6 +13,8 @@ require_once 'includes/config_session.inc.php';
     <link rel="stylesheet" href="dist/style.css">
     <script src="dist/script.js" defer></script>
 
+    <meta name="robots" content="index, follow">
+
     <!-- Favicon -->
     <link rel="icon" href="assets/favicons/favicon-32x32.png" type="image/x-icon">
     <link rel="shortcut icon" href="assets/favicons/favicon-16x16.png" type="image/x-icon">
