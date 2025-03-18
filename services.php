@@ -12,7 +12,7 @@
         <?php foreach ($appliances as $appliance): ?>
             <div class="flex-item img-<?= $appliance['side'] ?>" id="<?= $appliance['id'] ?>">
                 <?php if ($appliance['imgPosition'] === 'top'): ?>
-                    <img src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
+                    <img loading="lazy" src="<?= $appliance['imgSrc'] ?>" alt="<?= $appliance['imgAlt'] ?>" class="appliance-img">
                 <?php endif; ?>
                 <div class="service-desc">
                     <h2 class="eq-title title-animated"><?= $appliance['name'] ?></h2>

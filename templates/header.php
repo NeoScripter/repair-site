@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appliance Repair</title>
 
-    <link rel="stylesheet" href="reset.min.css">
-    <link rel="stylesheet" href="style.min.css">
-    <script src="script.js" defer></script>
+    <!-- <link rel="stylesheet" href="reset.min.css"> -->
+    <link rel="stylesheet" href="dist/style.css">
+    <script src="dist/script.js" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="assets/favicons/favicon-32x32.png" type="image/x-icon">

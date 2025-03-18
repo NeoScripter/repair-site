@@ -1,3 +1,5 @@
+*,::after,::before{box-sizing:border-box}*,ul{margin:0;padding:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}
+
 :root{
     --white: rgb(254, 254, 254);
     --bright-orange: rgba(255, 153, 0, 1);
@@ -19,14 +21,24 @@
 }
 
 @font-face {
-    font-family: 'Actay Regular';
-    src: url(assets/fonts/Actay-Regular.otf);
+    font-family: 'Actay Bold';
+    src: url('../assets/fonts/ActayWide-Bold.woff2') format('woff2'),
+        url('../assets/fonts/ActayWide-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'Actay Bold';
-    src: url(assets/fonts/ActayWide-Bold.otf);
+    font-family: 'Actay Regular';
+    src: url('../assets/fonts/Actay-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Actay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+
 
 html, body {
     width: 100%;

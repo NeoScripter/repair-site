@@ -14,7 +14,7 @@
             <div class="repair-request request popup-webform"><img src="assets/svgs/+orange.svg" alt="plus" class="plus-sign-btn">Repair request</div>
         </div>
         <div class="banner-img">
-            <img src="assets/images/appliances/bnr-img.png" alt="grey fridge, stove and washing machine staying next to each other" class="bnr-img">
+            <img loading="lazy" src="assets/images/appliances/bnr-img.webp" alt="gray fridge, stove and washing machine staying next to each other" class="bnr-img">
         </div>
         <div class="banner-flex-group">
             <div class="banner-desc">
@@ -92,8 +92,8 @@
             </div>
         </div>
         <div class="gallery-grid">
-            <img src="assets/images/gallery-1.png" alt="The top of a broken washing machine with the hands of a repairman in gloves">
-            <img src="assets/images/gallery-2.png" alt="Open top of a broken washing machine with wires and other tools lying around">
+            <img loading="lazy" src="assets/images/gallery-1.webp" alt="The top of a broken washing machine with the hands of a repairman in gloves">
+            <img loading="lazy" src="assets/images/gallery-2.webp" alt="Open top of a broken washing machine with wires and other tools lying around">
         </div>
     </section>
 

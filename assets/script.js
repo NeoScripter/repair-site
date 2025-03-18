@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     // Social links animaition
     function addSocialLinksEventListeners(link, icon, basePath) {
