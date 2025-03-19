@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'Actay Regular', 'system-ui';
+    font-family: 'Actay Regular';
     src: url('../assets/fonts/Actay-Regular.woff2') format('woff2'),
         url('../assets/fonts/Actay-Regular.woff') format('woff');
     font-weight: normal;
@@ -1191,7 +1191,10 @@ textarea.error {
     }
     .banner-img {
         width: 100%;
+        position: relative !important;
         margin-block: 24px;
+        top: 0px;
+        right: 0px;
     }
     .banner-title-prg {
         width: 100%;
