@@ -15,10 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      // Validate username
      if (is_input_empty($username)) {
         $errors['username'] = 'Your name is required.';
-    } elseif (!is_username_long_enough($username)) {
-        $errors['username'] = 'Username must be between 3 and 20 characters.';
-    } elseif (!is_username_correct($username)) {
-        $errors['username'] = 'Username can only contain characters.';
     } else {
         $valid_input['username'] = true;
     }
@@ -35,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate address
     if (is_input_empty($address)) {
         $errors['address'] = 'Your address is required.';
-    } elseif (!is_address_long_enough($address)) {
-        $errors['address'] = 'Address must be between 12 and 50 characters.';
+    } elseif (! filter_var($address, FILTER_VALIDATE_EMAIL)) {
+        $errors['address'] = 'Please enter the valid email address';
     } else {
         $valid_input['address'] = true;
     }
@@ -44,8 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate user message
     if (is_input_empty($userMessage)) {
         $errors['userMessage'] = 'A description of your problem is required.';
-    } elseif (is_description_too_short($userMessage)) {
-        $errors['userMessage'] = 'Please provide a more detailed description.';
     } elseif (is_description_too_long($userMessage)) {
         $errors['userMessage'] = 'Description is too long.';
     } else {
@@ -63,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $subject = 'New repair request';
 
         // Headers
-        $headers = "From: Alekseibalmakov@yahoo.com\r\n";
-        $headers .= "Reply-To: Alekseibalmakov@yahoo.com\r\n";
+        $headers = "From: alexey@expresshomeservice.us\r\n";
+        $headers .= "Reply-To: alexey@expresshomeservice.us\r\n";
         $headers .= "Content-Type: text/plain;charset=utf-8\r\n";
 
         // Prepare the email body
