@@ -53,8 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$errors) {
         // No errors, handle form submission (e.g., send email, save to database)
         // Email recipient and subject
-        // $to = 'Alekseibalmakov@yahoo.com';
-        $to = 'sange0337@gmail.com';
+        $to = 'Alekseibalmakov@yahoo.com';
+        // $to = 'sange0337@gmail.com';
         $subject = 'New repair request';
 
         // Headers

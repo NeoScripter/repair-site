@@ -60,8 +60,8 @@ require_once 'includes/config_session.inc.php';
                 </ul>
                 <div class="social-links desktop">
                     <a href="tel:+16507056591" class="social-link">+1 (650) 705-65-91</a>
-                    <a href="" class="social-link viber"><img src="assets/svgs/viber.normal.svg" alt="Viber" class="icon-social"></a>
-                    <a href="" class="social-link whatsapp"><img src="assets/svgs/whatsapp.normal.svg" alt="WhatsApp" class="icon-social"></a>
+                    <a href="viber://chat/?number=%2B16507056591" class="social-link viber"><img src="assets/svgs/viber.normal.svg" alt="Viber" class="icon-social"></a>
+                    <a href="wa.me/%2B16507056591" class="social-link whatsapp"><img src="assets/svgs/whatsapp.normal.svg" alt="WhatsApp" class="icon-social"></a>
                 </div>
                 <img src="assets/svgs/burger-menu.close.svg" alt="burger-menu" class="burger-menu closed">
                 <div class="overlay">
