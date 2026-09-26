@@ -53,12 +53,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$errors) {
         // No errors, handle form submission (e.g., send email, save to database)
         // Email recipient and subject
-        $to = 'Alekseibalmakov@yahoo.com';
+        // $to = 'Alekseibalmakov@yahoo.com';
+        $to = 'sange0337@gmail.com';
         $subject = 'New repair request';
 
         // Headers
-        $headers = "From: alexey@expresshomeservice.us\r\n";
-        $headers .= "Reply-To: alexey@expresshomeservice.us\r\n";
+        $headers = "From: ask@expresshomeservice.pro\r\n";
+        $headers .= "Reply-To: ask@expresshomeservice.pro\r\n";
         $headers .= "Content-Type: text/plain;charset=utf-8\r\n";
 
         // Prepare the email body
